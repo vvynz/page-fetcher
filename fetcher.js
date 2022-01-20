@@ -13,4 +13,12 @@ if (process.argv.length === 4) {
       throw error;
     }
   });
+  // using Node's api to write the file
+  fs.writeFile(fp, body, (error) => {
+    if (error) {
+      throw error;
+    }
+
+    console.log(`\nDownloaded and saved ${body.length} bytes to ${fp}.`);
+  });
 }
