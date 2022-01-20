@@ -13,7 +13,7 @@ if (process.argv.length === 4) {
       throw error;
     }
   });
-  // using Node's api to write the file
+  // using Node's api to write the file to our local filesystem
   fs.writeFile(fp, body, (error) => {
     if (error) {
       throw error;
